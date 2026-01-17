@@ -9,6 +9,7 @@ body {
 
 h1 {
   text-align: center;
+  margin-bottom: 36px;
 }
 
 main {
@@ -84,18 +85,18 @@ main {
   color: white;
 }
 
-.submit-btn.end {
+.submit-btn:disabled {
   cursor: not-allowed;
 }
 
 .newgame-btn {
-  cursor: not-allowed;
   background-color: white;
+  cursor: pointer;
   border: 1px solid grey;
 }
 
-.newgame-btn.start {
-  cursor: pointer;
+.newgame-btn:disabled {
+  cursor: not-allowed;
 }
 
 .newgame-btn:hover {
@@ -119,4 +120,40 @@ main {
 .main-result {
   font-weight: 600;
   margin-top: 0;
+}
+
+.guess-num {
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+/* media query */
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  main {
+    padding: 16px 24px;
+    max-width: 350px;
+  }
+
+  .game-instuction,
+  .game-input label,
+  #random-num,
+  #random-num::placeholder,
+  .game-input-instruction,
+  .game-buttons button,
+  .result-text p {
+    font-size: 14px;
+  }
+
+  .game-buttons button {
+    padding: 8px 12px;
+  }
+
+  .result-text {
+    padding: 8px;
+  }
 }
